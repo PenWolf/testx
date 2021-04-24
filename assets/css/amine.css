@@ -1,0 +1,287 @@
+    #space, .stars {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .stars {
+        background-image: 
+        radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+        background-repeat: repeat;
+        background-size: 200px 200px;
+        animation: zoom 5s infinite;
+        opacity: 0;
+    }
+
+    .stars:nth-child(1) {
+        background-position: 50% 50%;
+        animation-delay: 1s;
+    }
+    .stars:nth-child(2) {
+        background-position: 20% 60%;
+        animation-delay: 2s;
+    }
+    .stars:nth-child(3) {
+        background-position: -20% -30%;
+        animation-delay: 3s;
+    }
+
+    @keyframes zoom {
+        0% {
+        opacity: 0;
+        transform: scale(1);
+        animation-timing-function: ease-in;
+        } 
+        85% {
+        opacity: 1;
+        transform: scale(1.25);
+        animation-timing-function: ease-in-out;
+        }
+        100% {
+        opacity: 0;
+        transform: scale(1.5);
+        animation-timing-function: ease-in-out;
+
+        }
+    }
+    @media only screen and (max-width: 600px) {
+    .text-copy {
+        width: 300px;
+        }
+    }
+    /* start animation safex rulex */
+    /*default version*/
+    @font-face {
+        font-family: 'Quantum';
+        src: 
+        local('Quantum'),
+        url('../../quantum/Quantum.otf') 
+        format('opentype');
+    }
+    .btn-shine
+    {
+        margin-top:100px;
+        font-family:'Quantum', sans-serif;
+        color:#FFC50C;
+        font-size:70px;
+        transition:all 0.5s;
+    }
+    .btn-shine:hover {
+        text-shadow: 0 0 10px #FFF, 0 0 20px #FFF, 0 0 40px #FFF, 0 0 80px #FFF;
+        color: #FFF;
+    }
+    .btn-shine span:nth-child(5):hover {
+        animation: none;
+    }
+
+    .btn-shine span:nth-child(5) {
+        animation: shine 5s linear infinite;
+        transition: all .5s;
+    }
+    @media only screen and (max-width: 600px) {
+    .btn-shine {
+        width:300px;
+        }
+    .btn-shine span {
+        width:30px;
+        }
+    }
+    @keyframes shine {
+        0%,
+        20%,
+        50%,
+        80% {
+        color: #ffffff;
+        text-shadow: none;
+        }
+        30%,
+        70%,
+        95% {
+        color: #FFC50C;
+        text-shadow: 0 0 10px #FFF, 0 0 20px #FFF, 0 0 40px #FFF, 0 0 80px #FFF;
+        }
+    }
+    /* start auto generated txt rules */
+    .typewriter h1 {
+        width:800px;
+        color: #fff;
+        font-family: monospace;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .10em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        animation: 
+        typing 3.5s steps(30, end),
+        blink-caret .5s step-end infinite;
+    }
+    @media only screen and (max-width: 600px) {
+    .typewriter h1  {
+        width: 300px;
+        font-size: 18px;
+    }
+    }
+    /* The typing effect */
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: orange }
+    }
+    /* Start logo animation */
+
+    .logo {
+        animation: shine 5s linear infinite;
+        transition: all .5s;
+    }
+
+    /* Starrt road map css */
+
+
+    @mixin tablet-and-up {
+    @media screen and (min-width: 769px) { @content; }
+    }
+    @mixin mobile-and-up {
+    @media screen and (min-width: 601px) { @content;margin:0 5px; }
+    }
+    @mixin tablet-and-down  {
+    @media screen and (max-width: 768px) { @content; }
+    }
+    @mixin mobile-only {
+    @media screen and (max-width: 600px) { @content; }
+    }
+    @keyframes float {
+        0% {
+            box-shadow: 0 1px 1px 1px #ffffff;
+            transform: translatey(0px);
+        }
+        50% {
+            box-shadow: 0 1px 5px 1px #ffffff;
+            transform: translatey(-20px);
+        }
+        100% {
+            box-shadow: 0 1px 1px 1px #ffffff;
+            transform: translatey(0px);
+        }
+    }
+    
+
+
+    ul, li{
+        list-style: none;
+        padding: 0;
+    }
+
+    .road{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+        background: #301667;
+        padding: 3rem 0;
+    }
+    .wrapper{
+        background: #2C1460;
+        padding: 2rem;
+        border-radius: 15px;
+        width: 800px;
+        box-shadow: 0 5px 15px 0px #FFFFFF;
+        transform: translatey(0px);
+        animation: float 4s ease-in-out infinite;
+    
+    }
+    .wrapper h1{
+        font-size: 1.1rem;
+        font-family: sans-serif;
+        color:#FFC50C;
+    }
+    .sessions{
+        margin-top: 2rem;
+        border-radius: 12px;
+        position: relative;
+        color:white;
+    }
+    .wrapper li{
+        padding-bottom: 1.5rem;
+        border-left: 1px solid #abaaed;
+        position: relative;
+        padding-left: 20px;
+        margin-left: 10px;
+    }
+    .wrapper li:last-child{
+        border: 0px;
+        padding-bottom: 0;
+    }
+    .wrapper li:before{
+        content: '';
+        width: 15px;
+        height: 15px;
+        background: white;
+        box-shadow: 0 0 10px #FFF, 0 0 20px #FFF, 0 0 40px #FFF, 0 0 80px #FFF;
+        color: #FFF;
+        border-radius: 50%;
+        position: absolute;
+        left: -10px;
+        top: 0px;
+    }
+    
+    .time{
+        color: #DD00A9;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        @include mobile-and-up{
+        font-size: .9rem;
+    }
+    @include mobile-only{
+        margin-bottom: .3rem;
+        font-size: 0.85rem;
+    }
+
+    }
+.time p {
+        color: white;
+        font-family: sans-serif;
+        line-height: 1.5;
+        margin-top:0.4rem;
+        @include mobile-only{
+        font-size: .9rem;
+     }
+    }
+    .typewriterx h1{
+        margin-left: 180px;
+        width:300px;
+        color: #fff;
+        font-family: monospace;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        white-space: nowrap; /* Keeps the content on a single line */
+        animation: 
+        typing 3s steps(30, end),
+        blink-caret .5s step-end infinite;
+    }
+    @media only screen and (max-width: 600px) {
+        .typewriterx h1  {
+            width: 300px;
+            margin-left:0px;
+        }
+/* start road animation rulez */
+
+
+.future-roadmap{
+  padding-top: 50px;  
+}
+
+
+/* box animation */
+
+
